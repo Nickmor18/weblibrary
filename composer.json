@@ -1,0 +1,26 @@
+{
+    "name": "nickmor/weblibrary",
+    "description": "web library with google api",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Roman Ryabinin",
+            "email": "romario8745@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/http-foundation": "6.0.x-dev",
+        "pimple/pimple": "dev-main",
+        "robmorgan/phinx": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "helpers/helpers.php"
+        ]
+    }
+}

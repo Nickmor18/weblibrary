@@ -1,0 +1,42 @@
+<?php include ("./app/Views/Layout/header.php");?>
+<body>
+<form method="post" action="<?= $url ?>/?c=register&a=register" class="register-form">
+    <img class="mb-4" src="../../favicon.svg" alt="" width="72" height="72">
+    <br>
+    <h1 class="h3 mb-3 font-weight-normal">Зарегистрируйтесь пожалуйста</h1>
+    <p><em>Уже есть аккаунт? <a href="<?= $url ?>/?c=login">Войти</a></em></p>
+    <p style="font-weight:bold;">Основные данные</p>
+    <div class="container">
+
+        <div class="item">
+            <label for="inputName" class="sr-only">Имя</label>
+            <input type="text" id="inputName" name="name" class="form-control" placeholder="Имя"
+                   value="<?= $_SESSION['oldValue']['name'] ?? "" ?>" required autofocus><br>
+        </div>
+        <div class="item">
+            <label for="inputEmail" class="sr-only">Email*</label>
+            <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email адрес"
+                   value="<?= $_SESSION['oldValue']['email'] ?? "" ?>" required
+                   autofocus>
+        </div>
+    </div>
+
+    <p style="font-weight:bold;">Пароль</p>
+    <div class="container">
+
+        <div class="item">
+
+            <label for="inputPassword" class="sr-only">Пароль</label>
+            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Пароль"
+                   required>
+        </div>
+        <div class="item">
+            <label for="inputPassword" class="sr-only">Повторите Пароль</label>
+            <input type="password" id="inputPassword" class="form-control" name="password_confirmation"
+                   placeholder="Повторите Пароль" required>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Регистрация на сайте</button>
+</form>
+<?php include ("./app/Views/Layout/footer.php");?>

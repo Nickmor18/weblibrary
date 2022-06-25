@@ -1,0 +1,15 @@
+<?php if($user->isadmin): ?><a href="?c=admin">В админку</a>&nbsp;<?php endif; ?>
+    <a href="<?=$config['url']?>/?c=user&a=logout">Выход</a>
+<?php if(!$user->status): ?>
+    <h1 style="color:red;">Ваш аккаунт на модерации</h1>
+<?php else: ?>
+    <h1 style="color:green;">Ваш аккаунт активен</h1>
+    <br>
+    <table width="100%">
+        <tr>
+            <td>Имя Фамилия</td>
+            <td><?=$user->name?>  <?=$user->surname?></td>
+        </tr>
+
+    </table>
+<?php endif; ?>

@@ -1,0 +1,41 @@
+<?php include ("./app/Views/Layout/header.php");?>
+
+<body class="text-center">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/?c=Library">Список всех книг</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/?c=Library&a=search">Добавление/Поиск книги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/?c=Library&a=favorite">Любимые книги</a>
+                </li>
+                <form id="google_book_search_form" class="d-flex" style="margin-left: 25px">
+                    <input id="google_book_search" class="form-control me-2" type="search" placeholder="Найти книгу..."
+                           aria-label="Search">
+                </form>
+            </ul>
+
+            <ul class="navbar-nav" style="position: fixed; right: .5rem">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/?c=User&a=logout">(<?= $user->name ?>) Выход</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<table class="table table-hover table-search-result">
+    <tbody>
+    </tbody>
+</table>
+
+<?php include ("./app/Views/Layout/footer.php");?>
